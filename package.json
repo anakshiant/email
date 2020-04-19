@@ -1,0 +1,50 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.4",
+    "cz-lerna-changelog": "^2.0.0",
+    "lerna": "^3.20.2",
+    "husky": "^4.2.5"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    },
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "revert"
+      ],
+      "scope": {
+        "required": true,
+        "allowed": [
+          "root"
+        ],
+        "validate": true,
+        "multiple": true
+      },
+      "warnOnFail": false,
+      "maxSubjectLength": 100,
+      "helpMessage": ""
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "validate-commit-msg"
+    }
+  }
+}

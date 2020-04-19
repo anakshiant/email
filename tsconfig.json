@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "alwaysStrict": true,
+    "declaration": true,
+    "jsx": "react",
+    "module": "ES6",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true
+  },
+  "typeAcquisition": {
+    "enable": true
+  },
+  "exclude": [
+    "*.*",
+    "jest/*.*",
+    "node_modules",
+    "dist",
+    "**/dist/*.*",
+    "packages/ymir"
+  ]
+}
